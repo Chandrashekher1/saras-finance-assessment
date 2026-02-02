@@ -1,9 +1,10 @@
 <template>
-  <h1 class="text-3xl font-bold underline text-red-500">Hello Vue</h1>
+  <router-view />
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  
 }
 </script>
