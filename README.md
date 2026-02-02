@@ -1,41 +1,43 @@
-# saras-finance-assessment
+## Saras-finance-assessment - Using Vue.js
+The app provides real time search functionality with pagination, dark mode support, and smooth UI interactions designed as part of a Vue.js frontend developer assignment.
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Project Structure
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+```
+src/
+├── components/
+│   ├── SearchBar.vue
+│   ├── SearchResultList.vue
+│   ├── SearchResultItem.vue
+│   ├── Pagination.vue
+│   ├── Loader.vue
+│   └── DarkMode.vue
+├── App.vue
+├── main.js
+```
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
-
-```sh
+# clone the Repository
+```
+git clone https://github.com/Chandrashekher1/saras-finance-assessment.git
+```
+# Install Dependecies
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Run app locally
+```
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
+# Localhost
 ```
+http://localhost:5173
+```
+
 
 ### Lint with [ESLint](https://eslint.org/)
 
