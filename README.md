@@ -37,10 +37,3 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
