@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DarkMode from '@/components/DarkMode.vue';
+import Loader from '@/components/Loader.vue';
 import Pagination from '@/components/Pagination.vue';
 import SearchBar from '@/components/SearchBar.vue';
 import SearchResultList from '@/components/SearchResultList.vue';
@@ -62,12 +64,12 @@ onMounted(() => {
 
 </script>
 <template>
-    <div class="flex flex-col md:w-[500px] w-full lg:w-[700px] md:mx-auto px-8">
-        <div class="text-center mb-4">
-            <h1 class="font-bold md:text-5xl text-3xl mb-2">Search</h1>
-            <p class="text-gray-500">Find what you're Looking for</p>
+    <div class="flex md:justify-between dark:bg-black dark:text-white min-h-screen">
+        <div class="flex flex-col md:w-[500px] w-full lg:w-[700px] md:mx-auto px-8">
+        <div class="text-center mb-4 flex justify-center md:gap-8 items-center">
+             <h1 class="font-bold md:text-5xl text-3xl mb-2 dark:text-white">Search</h1>
+            <DarkMode />
         </div>
-        
         <SearchBar @search="handleSearch"/>
         <div class="mx-10">
             <Pagination v-if="totalPages>1" :totalPages="totalPages" :currentPage="currentPage" @changePage="handlePageChange"/>
@@ -87,7 +89,8 @@ onMounted(() => {
       <div v-if="error" class="flex justify-center mt-6">
         <p class="text-red-400 italic">Error fetching results.</p>
       </div>
-
-      
+    </div>
+    
+    
     </div>
 </template>

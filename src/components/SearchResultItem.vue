@@ -1,12 +1,12 @@
 <template>
-  <div class="mb-4 w-full hover:bg-gray-100 hover:shadow-md hover:rounded-lg transition-all duration-200">
-    <div class="border border-gray-200 rounded-lg p-4 " >
+  <div class="mb-4 w-full hover:bg-gray-100 dark:hover:bg-white/20 hover:shadow-md hover:rounded-lg transition-all duration-200">
+    <div class="border border-gray-200 dark:border-white/20 rounded-lg p-4 " >
       <div class="flex gap-4 cursor-pointer" @click="toggle">
-        <img :src="product.thumbnail" alt="product image" class="w-16 h-16 object-cover">
+        <img :src="product.thumbnail" alt="product image"loading="lazy" class="w-16 h-16 object-cover">
       <div >
         <h1 class="font-semibold md:text-lg text-base">{{ product.title }}</h1>
         <div class="mt-2">
-          <span class="text-gray-500 mr-2 md:mr-4 border border-gray-200 rounded-lg p-1 text-sm">{{ product.category ? product.category.toLowerCase() : 'N/A' }}</span>
+          <span class="text-gray-500 mr-2 md:mr-4 dark:border-white/20 border border-gray-200 rounded-lg p-1 text-sm">{{ product.category ? product.category.toLowerCase() : 'N/A' }}</span>
         </div>
       </div>
       </div>
