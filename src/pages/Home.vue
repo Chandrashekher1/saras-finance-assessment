@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import SearchBar from '@/components/SearchBar.vue';
 import SearchResultList from '@/components/SearchResultList.vue';
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 
 const query = ref('')
 const loading = ref(false)
-const error = ref('')
+const error = ref(false)
 const products = ref([])
 
 const handleSearch = (search) => {
@@ -27,7 +27,7 @@ const fetchData = async () => {
         const data = await response.json()
         products.value = data.products
     } catch (err) {
-        error.value = err
+        error.value = true
     } finally {
         loading.value = false
     }
@@ -45,8 +45,20 @@ onMounted(() => {
             <p class="text-gray-500">Find what you're Looking for</p>
         </div>
         <SearchBar @search="handleSearch"/>
+        <div v-if="loading" class="mt-4">
+            <Loader />
+        </div>
+
         <div v-if="!loading && filteredProducts.length" class="mt-4">
             <SearchResultList :products="filteredProducts" />
         </div>
+
+        <div v-if="!loading && !filteredProducts.length && !error" class="flex justify-center mt-6">
+        <p class="text-gray-400 italic">No search results found.</p>
+      </div>
+
+      <div v-if="error" class="flex justify-center mt-6">
+        <p class="text-red-400 italic">Error fetching results.</p>
+      </div>
     </div>
 </template>
