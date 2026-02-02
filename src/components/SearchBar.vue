@@ -13,7 +13,6 @@
 <script setup>
 import { ref } from "vue";
 const input = ref('')
-
 const emit = defineEmits(['search'])
 
 </script>

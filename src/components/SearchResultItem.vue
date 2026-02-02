@@ -1,10 +1,10 @@
 <template>
-  <div class="mb-4 w-[500px] hover:bg-gray-100 hover:shadow-md hover:border-gray-300 transition-all duration-200">
+  <div class="mb-4 md:w-[500px] hover:bg-gray-100 hover:shadow-md hover:border-gray-300 transition-all duration-200">
     <div class="border border-gray-200 rounded-lg p-4" >
       <div class="flex gap-4 cursor-pointer" @click="toggle">
         <img :src="product.thumbnail" alt="product image" class="w-16 h-16 object-cover">
       <div >
-        <h1 class="font-semibold text-lg">{{ product.title }}</h1>
+        <h1 class="font-semibold md:text-lg text-base">{{ product.title }}</h1>
         <span class="text-gray-500 mr-4 border border-gray-200 rounded-lg p-1 text-sm">{{ product.category ? product.category : 'N/A' }}</span>
         <span class="text-gray-500 text-sm border border-gray-200 rounded-lg p-1">{{ product.brand ? product.brand : 'N/A' }}</span>
       </div>

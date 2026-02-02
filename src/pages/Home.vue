@@ -39,9 +39,9 @@ onMounted(() => {
 
 </script>
 <template>
-    <div class="flex flex-col w-[500px] mx-auto">
+    <div class="flex flex-col md:w-[500px] w-full lg:w-[700px] md:mx-auto px-8">
         <div class="text-center mb-4">
-            <h1 class="font-bold text-5xl mb-2">Search</h1>
+            <h1 class="font-bold md:text-5xl text-3xl mb-2">Search</h1>
             <p class="text-gray-500">Find what you're Looking for</p>
         </div>
         <SearchBar @search="handleSearch"/>
