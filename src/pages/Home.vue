@@ -2,7 +2,7 @@
 import Pagination from '@/components/Pagination.vue';
 import SearchBar from '@/components/SearchBar.vue';
 import SearchResultList from '@/components/SearchResultList.vue';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 
 
 const query = ref('')
@@ -23,7 +23,6 @@ const filteredProducts = computed(() => {
         product.description.toLowerCase().includes(query.value.trim().toLowerCase())
     )
 })
-
 
 const totalPages = computed(() => (
     Math.ceil(filteredProducts.value.length / pageSize)
